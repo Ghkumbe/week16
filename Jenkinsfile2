@@ -1,13 +1,19 @@
 pipeline{ 
-    agen any
+    agent any
     tools{
         maven 'M2_HOME'
     }
     statges{
+        stage(SonarQube){
+            step{
+                sh 'mvn sonar:sonar'
+            }
+        }
         stage('maven coommand'){
             steps{ 
                 sh 'mvn clean compile install package'
             }
         }
+        
     }
 }
