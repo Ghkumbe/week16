@@ -1,0 +1,10 @@
+pipeline{ 
+    agen none
+    statges{
+        stage('maven coommand'){
+            steps{ 
+                sh 'mvn clean compile install package'
+            }
+        }
+    }
+}
