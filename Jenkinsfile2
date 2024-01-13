@@ -1,5 +1,5 @@
 pipeline{ 
-    agen none
+    agen any
     statges{
         stage('maven coommand'){
             steps{ 
